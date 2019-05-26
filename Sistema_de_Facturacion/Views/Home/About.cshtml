@@ -1,0 +1,89 @@
+﻿@model Sistema_de_Facturacion.Models.Usuarios
+
+
+<div id="botones">
+    <button class="btn btn-primary" data-target="#loginModal" data-toggle="modal">Iniciar sesion</button>
+    @Html.ActionLink("Registrarse", "Registro", "Usuarios", null, new { @class = "btn btn-primary", @style = "margin-left:20px;" })
+</div>
+<div class="modal" tabindex="-1" id="loginModal" data-keyboard="false" data-backdrop="static" >
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="width:350px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h3>Iniciar sesión</h3>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("Logearse", "Usuarios"))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        <div class="text-danger">
+                            @ViewBag.error
+                        </div>
+                        <hr />
+
+                        <p class="alert">@ViewBag.error</p>
+                        <div class="col-md-12">
+                            
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese su nombre",@id="nombre" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                        </div>
+
+                        <br /><br /><br />
+
+
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese su contraseña", @id = "contraseña" } })
+                            @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
+                        </div>
+
+                        <br />
+                        <div class="form-group">
+
+                            <div class="col-md-9" style="margin-left:105px;">
+                                @Html.ActionLink("Registrarse", "Registro", "Usuarios", null, new { @style = "margin-left:20px; padding:15px 0 15px 0;" })<br />
+                                <input id="submit" type="button" value="Iniciar sesión" class="btn btn-primary btn block" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+               
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var submit = $("#submit");
+    var res;
+    submit.click(function () {
+        $.ajax({
+            url: "Usuarios/Logearse",
+            type: "Post",
+            data: {nombre:nombre,contraseña:contraseña},
+            success: function (resultado) {
+                if (resultado == "aprobado") {
+                    window.location.href("Home/index");
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("ha ocurrido un error");
+            }
+
+        })
+
+    });
+
+   
+</script>

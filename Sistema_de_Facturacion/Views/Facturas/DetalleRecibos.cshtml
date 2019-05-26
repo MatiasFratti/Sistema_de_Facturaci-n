@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Sistema_de_Facturacion.Models.DetalleRecibo>
+
+<style>
+    th {
+        font-weight: 800;
+        font-size: medium;
+    }
+</style>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NroRecibo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NroFactura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moneda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NroCheque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Banco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroRecibo)
+        </td>
+        <td>
+            <ul>@Html.Raw(item.NroFactura)</ul>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moneda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroCheque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Banco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+       
+    </tr>
+}
+
+</table>
+<div class="col-md-2 col-md-offset-10">
+    <a href="#" class="btn btn-info btn-lg" style="color:white; background-color:black;">
+        <span class="glyphicon glyphicon-chevron-up"></span>Top
+    </a>
+</div>

@@ -1,0 +1,223 @@
+﻿@model Sistema_de_Facturacion.Models.Facturas
+
+@{
+
+
+    Layout = null;
+}
+
+
+
+
+@{
+    ViewBag.title = "Facturación";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/Content/Factura.css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<h4 id="error">@ViewBag.error</h4>
+
+
+
+<div class="Contenedor">
+    <div class="container-fluid">
+
+
+        <select class="custom-select" id="moneda">
+            <option selected>U$S</option>
+            <option value="1">$</option>
+
+        </select>
+
+    </div>
+
+    <div id="credito_rut"><h4 style="float:right">   RUT: <span style="margin-left:2px;">@ViewBag.Rut</span></h4></div>
+    <div id="credito"><h4>COMPROBANTE:<span style="margin-left:3px;">Crédito</span></h4></div>
+    <div id="numreo_factura"><h4 style="float:right"> N°: <input id="nroFactura" style="margin-left:3px;" disabled></h4></div>
+    @{ if (ViewBag.logo == "http://www.aesoftmarket.com/uploads/fe-logo-8076354209.png")
+        {
+            <div id="logo" style="margin-right:20px;">
+                <img class="img-fluid" id="logo" src="http://www.aesoftmarket.com/uploads/fe-logo-8076354209.png" style="width:70%; height:auto; margin-top:40px;" />
+            </div>
+        }
+        else
+        {
+            <div id="logo" style="margin-right:20px;">
+                <img class="img-fluid" id="logo" src="~/Context/@ViewBag.logo" style="width:70%; height:auto; margin-top:20px;"/>
+            </div>
+            
+        }
+        
+    }
+    <div id="razon"><h4 style="float:right; margin-left:30px">Nombre: <span>@ViewBag.Razon</span></h4></div>
+    <div id="direccion"><h4 style="float:right">Dirección: <span>@ViewBag.Dire</span></h4></div>
+    <div id="telefono"><h4 style="float:right">Teléfono: <span>@ViewBag.Tel</span></h4></div>
+
+
+    <form method="post" action="../Facturas/Facturar">
+        <label id="tipo_cambio" for="Tipo_cambio" style="margin:4px -8px 2px 19px; height:27px;">T/cambio</label>
+        <input type="number" name="Tipo_cambio" step="0.01" style="margin:4px 0 2px 4px;" />
+        <input id="_moneda" name="moneda" value="USS" style="display:none" />
+        <input id="nroFact" name="nroFactura" style="display:none" />
+        <div id="rut_comprador">
+            <label for="rut_input">RUT COMPRADOR</label>
+            <input type="number" name="rut" class="form-inline" id="rut_input" style="width:60%; float:right; margin-right:39px;" />
+        </div>
+        <div id="nombre_cliente">
+            <label for="nombre_input">NOMBRE</label>
+            <input class="form-inline" name="nombre" id="nombre_input" style="width:60%; float:right; margin-right:39px;" />
+        </div>
+        <div id="direccion_cliente">
+            <label for="direccion_cli_input">DIRECCION</label>
+            <input class="form-inline" name="direccion" id="direccion_cli_input" style="width:60%; float:right; margin-right:39px;" />
+        </div>
+        <div class="fecha">
+            <div class="grid_fecha">
+                <div id="dia">
+                    <h4>Fecha</h4>
+                    <input class="form-inline" id="fecha_input" name="fecha" style="width:200px; padding-left:17px;" />
+                </div>
+                @*<div id="mes">
+                        <h4>MES</h4>
+                        <input type="number" class="form-inline" id="mes_input" name="mes" style="width:68px; padding-left:17px;" />
+                    </div>
+                    <div id="ano">
+                        <h4>Año</h4>
+                        <input type="number" class="form-inline" id="año_input" name="anio" style="width:68px; " />
+                    </div>*@
+            </div>
+
+        </div>
+
+
+        <div id="cantidad">
+            <h4>CANTIDAD</h4>
+            <input type="number" class="form-inline" id="cantidad_input1" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input2" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input3" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input4" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input5" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input6" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input7" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input8" name="cantidad" />
+            <input type="number" class="form-inline" id="cantidad_input9" name="cantidad" />
+        </div>
+        <div id="pallet">
+            <h4>PALLET</h4>
+            <input type="number" class="form-inline" id="pallet_input1" />
+            <input type="number" class="form-inline" id="pallet_input2" />
+            <input type="number" class="form-inline" id="pallet_input3" />
+            <input type="number" class="form-inline" id="pallet_input4" />
+            <input type="number" class="form-inline" id="pallet_input5" />
+            <input type="number" class="form-inline" id="pallet_input6" />
+            <input type="number" class="form-inline" id="pallet_input7" />
+            <input type="number" class="form-inline" id="pallet_input8" />
+            <input type="number" class="form-inline" id="pallet_input9" />
+        </div>
+        <div id="detalle">
+            <h4>DETALLE</h4>
+            <input class="form-inline" id="detalle_input1" name="productos" />
+            <input class="form-inline" id="detalle_input2" name="productos" />
+            <input class="form-inline" id="detalle_input3" name="productos" />
+            <input class="form-inline" id="detalle_input4" name="productos" />
+            <input class="form-inline" id="detalle_input5" name="productos" />
+            <input class="form-inline" id="detalle_input6" name="productos" />
+            <input class="form-inline" id="detalle_input7" name="productos" />
+            <input class="form-inline" id="detalle_input8" name="productos" />
+            <input class="form-inline" id="detalle_input9" name="productos" />
+        </div>
+        <div id="precio_unit">
+            <h4>P. UNIT.</h4>
+            <input type="number" class="form-inline" id="precio_input1" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input2" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input3" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input4" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input5" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input6" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input7" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input8" name="precio" step="0.01" />
+            <input type="number" class="form-inline" id="precio_input9" name="precio" step="0.01" />
+        </div>
+        <div id="total">
+            <h4>TOTAL</h4>
+            <input type="number" class="form-inline" id="total_input1" step="0.01" />
+            <input type="number" class="form-inline" id="total_input2" step="0.01" />
+            <input type="number" class="form-inline" id="total_input3" step="0.01" />
+            <input type="number" class="form-inline" id="total_input4" step="0.01" />
+            <input type="number" class="form-inline" id="total_input5" step="0.01" />
+            <input type="number" class="form-inline" id="total_input6" step="0.01" />
+            <input type="number" class="form-inline" id="total_input7" step="0.01" />
+            <input type="number" class="form-inline" id="total_input8" step="0.01" />
+            <input type="number" class="form-inline" id="total_input9" step="0.01" />
+        </div>
+
+        <div id="subtotal">
+            <label for="subtotal_input">SUBTOTAL </label>
+            <input @*type="number"*@ class="form-inline" id="subtotal_input" name="subtotal" style="float:right; width:100px" step="0.01" />
+        </div>
+        <div id="iva">
+            <label for="iva_input">IVA (22%)</label>
+            <input type="number" class="form-inline" id="iva_input" style="float:right; width:100px" step="0.01" />
+        </div>
+        <div id="total_precio">
+            <label for="total_precio_input">TOTAL(U$S)</label>
+            <input @*type="number"*@ class="form-inline" id="total_precio_input" name="total" style="float:right; width:100px; " step="0.01" />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1" style="margin-left:400px;">
+                    <input type="button" class="btn btn-primary" value="Calcular" id="calcular" style="margin-top:320px; margin-left:350px; height:45px; background-color:black; " />
+                    <input type="submit" class="btn btn-primary" value="Facturar" id="facturacion" style="margin-top:5px; margin-left:350px; height:45px; background-color:black; " />
+                    @Html.ActionLink("Panel principal", "Index", "Home", null, new { @class = "btn btn-primary", @id = "btn_Home", @style = " background-color:black; float:left;" })
+                    @Html.ActionLink("Factura en PDF", "PDF_Factura", "Facturas", null, new { @class = "btn btn-primary", @id = "btn_Home", @style = " background-color:black; float:left;" })
+                </div>
+            </div>
+           
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="~/Scripts/Factura.js"></script>
+<script>
+    $("#moneda").focusout(function () {
+        if ($("#moneda").val() != "U$S") {
+
+            $("#_moneda").val("$");
+        }
+    });
+    //var nro = $("#nroFactura").val();
+    $("#nroFactura").focusout(function () {
+        //console.log(nro + " nro");
+        var nroFact_input = $("#nroFact").val();
+        $("#nroFact").val($("#nroFactura").val());
+        console.log($("#nroFact").val() + " input");
+    });
+    $("#error").click(function () {
+        $("#error").css("display", "none");
+    });
+    function inputNroFact() {
+        $.ajax({
+            url: "NroFactura",
+            type: "GET",
+            success: function (res) {
+                console.log(res);
+                var nro = parseInt(res);
+                if (res != "") {
+                    $("#nroFactura").val(nro + 1);
+                }
+                else {
+                    $("#nroFactura").val(1);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("xhr: ", xhr, " error: ", error);
+                alert("Error", status);
+            }
+        })
+    }
+    inputNroFact();
+</script>
+
+

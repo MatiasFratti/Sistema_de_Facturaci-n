@@ -1,0 +1,156 @@
+﻿@model IEnumerable<Sistema_de_Facturacion.Models.Productos>
+@{
+    ViewBag.Title = "Productos";
+}
+<style>
+    #buscador {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: 2rem;
+    }
+    th{
+        font-weight:800;
+        font-size:large;
+    }
+</style>
+<div class="col-lg-2 col-lg-offset-4">
+    <br />
+    <img src="https://pngimage.net/wp-content/uploads/2018/06/gestion-stock-png-2.png" style="width:100px;" />
+
+</div>
+
+<div class="col-lg-3" style="position:fixed;">
+    <br />
+    <label>Buscar Producto</label>
+     <div>
+          <div id="buscador">
+            <input class="form-control" id="searchInput" />
+
+            <a id="buscar" class="btn btn-default" style="color:white; background-color:black;">
+                <span class="glyphicon glyphicon-search" ></span> Buscar
+            </a>
+            
+
+        </div>
+     </div>
+   
+    
+</div>
+<script>
+    $("#searchInput").autocomplete({
+        source: "../Productos/GetSearchValue",
+        dataType: "json"
+
+    });
+   
+    var producto = $("#searchInput").val();
+    var idProducto = `#${producto}`;
+    var clase = $(idProducto).attr('class');
+    $("#buscar").click(function () {
+         
+         producto = $("#searchInput").val();
+        idProducto = `#${producto}`;
+        var posicion = $(idProducto).offset().top;
+        $("html, body").animate({
+            scrollTop: (posicion-170)
+        }, 700);
+        posicion = 0;
+        console.log(clase+" clase")
+        clase = $(idProducto).attr('class');
+        $(idProducto).attr("class", "bg-info");
+        
+
+    });
+    $("#searchInput").focusin(function () {
+       
+        var j = ($("td").length / 5);
+        for (var i = 0; i < j; i++) {
+            //$("." + i).attr("class",''+i+'');
+            if (parseInt($("#" + i).text().replace(/ /g, "")) != 0) {
+                console.log(parseInt($("#" + i).text().replace(/ /g, "")));
+                $(idProducto).removeAttr("class");
+
+                $(idProducto).attr("class", clase);
+
+            }
+            else {
+                $("." + i).addClass("class", '' + i + '');
+            }
+        }
+    });
+    
+</script>
+<div class="col-lg-2">
+    <br />
+    <br />
+    
+        @Html.ActionLink("Agregar producto  ", "Create", null, new { @class = "btn btn-primary btn-lg ", @style="background-color:black;" })
+    
+</div>
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th></th>
+    </tr>
+     @{ var i=0;}
+    @foreach (var item in Model)
+    {        
+        i++;
+        <tr id="@item.NombreProducto" class="@i">
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td id="@i">
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-primary", @style = "background-color:black;" }) 
+                @Html.ActionLink("Detalles", "Details", new { id = item.Id }, new { @class = "btn btn-success" }) 
+                @Html.ActionLink("Borrar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+   
+</table>
+<div class="col-md-2 col-md-offset-10" >
+    <a href="#" class="btn btn-info btn-lg" style="background-color:black;">
+        <span class="glyphicon glyphicon-chevron-up"></span>Top
+    </a>
+</div>
+<script>
+    
+    parseInt($("#"+j).text().replace(/ /g, ""));
+    var j = ($("td").length / 5);
+    console.log(j);
+    for (var i = 0; i < j; i++) {
+        if (parseInt($("#" + i).text().replace(/ /g, "")) === 0) {
+            //$("." + i).attr("class", "alert-danger");
+            $("." + i).attr({
+                class:"alert-danger",
+                alt: "No hay stock",
+                title: "No hay stock"
+            });
+        }
+
+    }
+   
+</script>

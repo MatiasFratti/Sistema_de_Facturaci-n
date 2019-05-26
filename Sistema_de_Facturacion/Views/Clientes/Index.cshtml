@@ -1,0 +1,156 @@
+﻿@model IEnumerable<Sistema_de_Facturacion.Models.Clientes>
+
+@{ViewBag.title = "Clientes"; }
+<style>
+    #buscador {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: 2rem;
+    }
+
+    #btn_agregar {
+        margin: 13px 0px 0px 480px;
+    }
+
+    th {
+        font-weight: 800;
+        font-size: large;
+    }
+</style>
+
+<div class="col-lg-3" style="position:fixed;">
+    <br />
+    <label>Buscar Clientes</label>
+
+
+    <div id="buscador">
+        <input class="form-control" id="searchInput" />
+
+        <a id="buscar" class="btn btn-default" style="color:white; background-color:black;">
+            <span class="glyphicon glyphicon-search"></span> Buscar
+        </a>
+
+
+    </div>
+
+</div>
+<script>
+    $("#searchInput").autocomplete({
+        source: "../Clientes/GetSearchValue2",
+        dataType: "json"
+
+    });
+    var cliente = $("#searchInput").val();
+    var idcliente = `#${cliente.replace(/ /g, "")}`;
+    var clase = $(idcliente).attr('class');
+    console.log(clase + " " + idcliente);
+    $("#buscar").click(function () {
+
+        cliente = $("#searchInput").val();
+        idcliente = `#${cliente.replace(/ /g, "")}`;
+        clase = $(idcliente).attr('class');
+        console.log(idcliente);
+        var posicione = $(idcliente).offset().top;
+        $("html, body").animate({
+            scrollTop: (posicione - 170)
+        }, 700);
+        posicion = 0;
+        console.log(clase + " clase")
+
+        console.log(clase);
+        $(idcliente).attr("class", "bg-info");
+
+
+    });
+    $("#searchInput").focusin(function () {
+
+        var j = ($("td").length / 6);
+        for (var i = 0; i < j; i++) {
+            //$("." + i).attr("class",''+i+'');
+            if (parseInt($("#" + i).text().replace(/ /g, "")) >= 0) {
+                console.log(parseInt($("#" + i).text().replace(/ /g, "")));
+                $(idcliente).removeAttr("class");
+
+                $(idcliente).attr("class", clase);
+
+            }
+            else {
+                $("." + i).addClass(i);
+            }
+        }
+    });
+
+</script>
+<br />
+<p>
+    @Html.ActionLink("Agregar cliente", "Create", null, new { @class = "btn btn-primary btn-lg", @id = "btn_agregar", @style = "background-color:black;" })
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.razonSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoCuenta)
+        </th>
+        <th></th>
+    </tr>
+    @{ var i = 0; }
+    @foreach (var item in Model)
+    {
+        i++;
+        <tr id="@item.razonSocial.Replace(" ","")" class="@i">
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.razonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.direccion)
+            </td>
+            <td id="@i">
+                @Html.DisplayFor(modelItem => item.estadoCuenta)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdCliente }, new { @class = "btn btn-primary", @style = "background-color:black;" })
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdCliente }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Borrar", "Delete", new { id = item.IdCliente }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+<div class="col-md-2 col-md-offset-10">
+    <a href="#" class="btn btn-info btn-lg" style="color:white; background-color:black;">
+        <span class="glyphicon glyphicon-chevron-up"></span>Top
+    </a>
+</div>
+<script>
+    parseInt($("#" + j).text().replace(/ /g, ""));
+    var j = ($("td").length / 6);
+    console.log(j);
+    for (var i = 1; i <= j; i++) {
+        if (parseInt($("#" + i).text().replace(/ /g, "")) < 0) {
+            //$("." + i).attr("class", "alert-danger");
+            $("." + i).attr({
+                class: "alert-danger",
+                alt: "Cliente con deuda",
+                title: "Cliente con deuda"
+            });
+        }
+
+    }
+</script>

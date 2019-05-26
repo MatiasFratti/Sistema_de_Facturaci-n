@@ -1,0 +1,142 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ReciboDePago - Sistema de Facturación</title>
+   
+
+    <link rel="stylesheet" href="~/Content/Recibo.css" />
+
+</head>
+<body>
+    @Html.ActionLink("Inicio","Index","Home",null,new {@type="button"})
+   
+    <div id="contenedor">
+        <div id="logo"></div>
+        <form action="ReciboDePago" method="post" style="display:contents;">
+            <select class="dropdown-menu" id="moneda" name="moneda">
+                <option value="0">U$S</option>
+                <option value="1">$</option>
+            </select>
+            <div id="tc">
+                <h4 id="tipo_cambio" style="margin-top:-35px;">T/cambio<input type="number" name="Tipo_cambio" step="0.01" style="margin-top:85px; width:50px" /></h4>
+
+            </div>
+
+            <div id="monto"><input type="text" name="monto" id="_monto" placeholder="Ingrese el monto" style="height:22px; width:115px;" /></div>
+            <div id="credito_rut"><h4 style="float:right">   RUT: <span>&nbsp 217631310018</span></h4></div>
+            <div id="recibo"><h4 style="float:right;">COMPROBANTE: <span style="float:right;">&nbsp RECIBO DE PAGO</span></h4></div>
+            <div id="numreo_factura"><h4 style="float:right">N°: <input id="nrorecibo" type="text" style="margin-left:3px; height:22px;" name="nro_recibo"></h4></div>
+            <div class="cuadro">
+                <div id="factura">
+                    <h4 style=" color:#788FF3;">N° FACTURA</h4>
+                    <input id="fc1" type="text" name="nro_factura" />
+                    <input id="fc2" type="text" name="nro_factura" />
+                    <input id="fc3" type="text" name="nro_factura" />
+                    <input id="fc4" type="text" name="nro_factura" />
+                    <input id="fc5" type="text" name="nro_factura" />
+                </div>
+                <div id="importe">
+                    <h4 style="margin-left:10px; color:#788FF3;">IMPORTE</h4>
+                    <input id="importe1" />
+                    <input id="importe2" />
+                    <input id="importe3" />
+                    <input id="importe4" />
+                    <input id="importe5" />
+                </div>
+            </div>
+
+            <div id="fecha_en_linea"><h4>Fecha&nbsp<input type="text" id="dia_mes" name="dia_mes"  autocomplete="off" style="width:250px; height:22px;">de&nbsp<input type="text" id="anio" name="anio" style="width:92px; height:22px;"></h4></div>
+            <div id="nombre_razon"><h4>Recibimo de &nbsp<input name="nombre_cliente" type="text" id="razon_social" style="width:318px; height:22px;"></h4></div>
+
+            <div id="monto_escrito">
+                <h4>
+                    la cantidad &nbsp<select class="dropdown-menu" id="moneda">
+                        <option value="0">U$S</option>
+                        <option value="1">$</option>
+                    </select>&nbsp<input type="text" name="monto_escrito" style="width:273px; height:22px;">
+                </h4>
+            </div>
+
+            <div id="Cheque_efectivo" style="margin-top:30px;">
+                <h4>
+                    En<select id="tipo_pago" name="tipo_pago">
+                        <option value="0">Cheque</option>
+                        <option value="1">Efectivo</option>
+                    </select>
+                    N°
+                    <input type="text" id="nro_cheque" style="width:125px; height:22px;" name="nro_cheque">
+                    c/Banco
+                    <input type="text" id="banco" style="width:97px; height:22px;" name="banco">
+                </h4>
+                <div id="concepto" style="margin-top:20px;">
+                    <h4>
+                        por concepto
+                        <input type="text" id="concepto_input" style="width:318px; height:22px;">
+                    </h4>
+                </div>
+            </div>
+            <input id="emitir" type="submit" class="btn btn-primary" value="Emitir" style="height:35px; border-radius:4px; background-color:black; color:white;" />
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#dia_mes").datepicker({ dateFormat: 'dd-mm-yy' });
+
+        });
+        $($("#razon_social")).autocomplete({
+            source: "../Clientes/GetSearchValue2",
+            dataType: "json"
+
+        });
+        $("#tipo_pago").focusout(function () {
+            if ($("#tipo_pago").val() == "1") {
+                $("#nro_cheque").attr("disabled", "disabled");
+                $("#banco").attr("disabled", "disabled");
+                console.log("h")
+            }
+
+        });
+        $("#tipo_pago").focusout(function () {
+            if ($("#tipo_pago").val() == "0") {
+                $("#nro_cheque").attr("disabled", false);
+                $("#banco").attr("disabled", false);
+                console.log("u")
+            }
+
+        });
+        var anio = new Date();
+        var _anio = anio.getUTCFullYear();
+        $("#anio").val(_anio);
+
+        $("#emitir").click(function (e) {
+            if ($("#_monto").val() == "" || $("#nrorecibo").val() == "" || $("#dia_mes").val() == "" || $("#razon_social").val() == "") {
+                e.preventDefault();
+                alert("Debe completar los campos indispensables");
+            }
+
+            else {
+                var emitir = confirm("¿Desea emitir el recibo?");
+                if (emitir == false) {
+                    e.preventDefault();
+                    alert("No se ha emitido el recibo");
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

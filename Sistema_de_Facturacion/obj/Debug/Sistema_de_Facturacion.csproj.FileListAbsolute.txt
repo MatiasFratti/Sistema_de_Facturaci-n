@@ -1,0 +1,183 @@
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Sistema_de_Facturacion.dll.config
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Sistema_de_Facturacion.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Sistema_de_Facturacion.pdb
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csc.exe
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csc.exe.config
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csc.rsp
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csi.exe
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csi.exe.config
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csi.rsp
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.AppContext.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Console.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.Compression.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.Pipes.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Claims.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.ValueTuple.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.XPath.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\vbc.exe
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\vbc.exe.config
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\vbc.rsp
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Antlr3.Runtime.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.SqlServer.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Newtonsoft.Json.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Helpers.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Mvc.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Optimization.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Razor.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Razor.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\WebGrease.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.SqlServer.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Helpers.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Mvc.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Optimization.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Razor.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Razor.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Newtonsoft.Json.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Antlr3.Runtime.pdb
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Razor.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.csproj.CoreCompileInputs.cache
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.csproj.CopyComplete
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.dll
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.pdb
+C:\Users\alba\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.csprojAssemblyReference.cache
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Sistema_de_Facturacion.dll.config
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Sistema_de_Facturacion.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Sistema_de_Facturacion.pdb
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csc.exe
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csc.exe.config
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csc.rsp
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csi.exe
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csi.exe.config
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\csi.rsp
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.AppContext.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Console.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.Compression.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Claims.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.ValueTuple.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\vbc.exe
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\vbc.exe.config
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\vbc.rsp
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Antlr3.Runtime.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.SqlServer.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Newtonsoft.Json.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Helpers.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Mvc.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Optimization.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Razor.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Razor.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\WebGrease.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\EntityFramework.SqlServer.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Helpers.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Mvc.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Optimization.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.Razor.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Web.WebPages.Razor.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Newtonsoft.Json.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Antlr3.Runtime.pdb
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.Razor.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.csproj.CoreCompileInputs.cache
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.csproj.CopyComplete
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.pdb
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\bin\Rotativa.dll
+C:\Users\Aurora britos\source\repos\Sistema_de_Facturacion\Sistema_de_Facturacion\obj\Debug\Sistema_de_Facturacion.csprojAssemblyReference.cache

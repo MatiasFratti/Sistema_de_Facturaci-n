@@ -1,0 +1,188 @@
+﻿@model Sistema_de_Facturacion.Models.Clientes
+<style>
+    th {
+        font-weight: 700;
+        font-size: 20px;
+        padding: 10px;
+        background-color: grey;
+    }
+    td {
+        padding: 0 0 0 35px;
+    }
+   
+    p {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    #rut {
+        text-align: center;
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+    #recibo {
+        text-align: center;
+    }
+</style>
+@{
+    if (ViewBag.nroFacturas == null)
+    {
+        ViewBag.nroFacturas = "No hay Facturas";
+    }
+    if (ViewBag.facturadoPesos == null)
+    {
+        ViewBag.facturadoPesos = 0;
+    }
+    if (ViewBag.facturadoUSD == null)
+    {
+        ViewBag.facturadoUSD = 0;
+    }
+    if (ViewBag.nroRecibos == null)
+    {
+        ViewBag.nroRecibos = "No hay recibos";
+    }
+    if (ViewBag.ReciboDolares == null)
+    {
+        ViewBag.ReciboDolares = 0;
+    }
+    if (ViewBag.ReciboPesos == null)
+    {
+        ViewBag.ReciboPesos = 0;
+    }
+}
+<div>
+    <center>
+        <h3>Cliente:<span style="font-weight:700;"> @Html.DisplayFor(model => model.razonSocial)</span> </h3>
+
+        <table class="table-bordered" style="border: solid 2px;">
+            <tr>
+                <th style="padding: 0 30px 0 30px;">
+                    @Html.DisplayNameFor(model => model.nombreCliente)
+                </th>
+
+
+
+                <th style="padding: 0 60px 0 60px;">
+                    @Html.DisplayNameFor(model => model.razonSocial)
+                </th>
+
+
+
+                <th id="rut">
+                    @Html.DisplayNameFor(model => model.rut)
+                </th>
+
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.estadoCuenta)
+                </th>
+            </tr>
+            <tr style="height:60px;">
+                <td>
+                    <p> @Html.DisplayFor(model => model.nombreCliente)</p>
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.razonSocial)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.rut)
+                </td>
+
+                <td>
+                    <p id="estado_cuenta">U$S <span id="estado">@Html.DisplayFor(model => model.estadoCuenta)</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <center><h2>Facturación</h2></center>
+        <table class="table-bordered" style="border: solid 2px;">
+            <tr>
+                <th>
+                    Cantidad de facturas
+                </th>
+                <th>
+                    Facturas
+                </th>
+                <th>
+                    facturado (U$S)
+                </th>
+                <th style="padding: 0 17px 0 17px;">
+                    facturado ($)
+                </th>
+                <th style="padding: 0 48px 0 48px;">
+                    total (U$S)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @ViewBag.cantidadFacturas
+                </td>
+                <td>
+                    <ul style="margin-left:-40px;">@Html.Raw(ViewBag.nroFacturas)</ul>
+                </td>
+                <td>
+                    U$S @ViewBag.facturadoUSD
+                </td>
+                <td>
+                    $ @ViewBag.facturadoPesos
+                </td>
+                <td>
+                    U$S <span id="totals">@ViewBag.TotalDolares</span>
+                </td>
+
+            </tr>
+        </table>
+        <center><h2>Recibos de Pago</h2></center>
+        <table class="table-bordered" style="border: solid 2px;">
+            <tr>
+                <th style="padding: 0 21px 0 21px;">
+                    Cantidad Recibos
+                </th>
+                <th id="recibo">
+                    Recibos
+                <th>
+                    Pagos en dólares
+                </th>
+                <th>
+                    Pagos en pesos
+                </th>
+                <th style="padding: 0 38px 0 38px;">
+                    Total (U$S)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @ViewBag.CantidadRecibos
+                </td>
+                <td>
+                    <ul style="margin-left:-40px;">@Html.Raw(ViewBag.nroRecibos)</ul>
+                </td>
+                <td>
+                    U$S @ViewBag.ReciboDolares
+                </td>
+                <td>
+                    $ @ViewBag.ReciboPesos
+                </td>
+                <td>
+                    U$S @ViewBag.TotalReciboUSD
+                </td>
+            </tr>
+        </table>
+    </center>
+          
+</div>
+
+
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdCliente }) |
+    @Html.ActionLink("Volver", "Index")
+
+<script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    var estado = $("#estado").text();
+    var Estado = parseFloat(estado);
+    if (Estado < 0) {
+        $("#estado_cuenta").css("color", "red");
+    }
+</script>

@@ -1,0 +1,40 @@
+﻿
+<div id="global">
+    <div>
+        <h3>Detalle de la factura N° @ViewBag.nroFactura</h3>
+
+    </div>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>N° Factura</th>
+                <th>Fecha</th>
+                <th>Productos</th>
+                <th>Moneda</th>
+                <th>Subtotal</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@ViewBag.nombre</td>
+                <td>@ViewBag.nroFactura</td>
+                <td>@ViewBag.fecha</td>
+                <td><ul>@Html.Raw(ViewBag.producto)</ul></td>
+                <td>@ViewBag.moneda</td>
+                <td>@ViewBag.subtotal</td>
+                <td>@ViewBag.total</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-sm-8">
+            <h4>@Html.ActionLink("Panel principal", "Index", "Home", null, new { @class = "btn btn-outline-secondary" })</h4>
+        </div>
+        <div class="col-sm-4">
+            <h4>@Html.ActionLink("Listado de facturas", "DetalleFacturas", "Facturas", null, new { @class = "btn btn-outline-secondary" })</h4>
+        </div>
+    </div>
+</div>

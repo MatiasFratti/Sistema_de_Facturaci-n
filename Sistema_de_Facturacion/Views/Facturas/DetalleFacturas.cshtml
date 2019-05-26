@@ -1,0 +1,387 @@
+﻿
+
+
+
+@model IEnumerable<Sistema_de_Facturacion.Models.DetalleFactura>
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+    th {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    hr {
+        border: solid 1px;
+        color: black;
+    }
+    /*widget*/
+    .ui-widget {
+        width: 300px;
+        font-family: Verdana,Arial,sans-serif;
+        font-size: .9em;
+    }
+    #buscador, #buscador2{
+        display:flex;
+        width:300px;
+        align-items:center;
+        margin-left:-15px;
+       
+    }
+    .col-lg-3 {
+        padding: 10px;
+        margin-right:100px;
+    }
+</style>
+<h1>
+    @Html.ActionLink("Panel principal", "Index", "Home", null, new { @class = "btn btn-primary", @style = "background:black" })
+</h1>
+<div class="col-lg-4 col-lg-offset-10">
+    @Html.ActionLink("Facturar", "Facturar", "Facturas", null, new { @class = "btn btn-defauult", @style = "background:black; color:white;" })
+</div>
+<script>
+    var d = new Date();
+    var dia = d.getDate();
+    var mes = d.getMonth();
+    var ano = d.getFullYear();
+
+    console.log(dia + mes + ano);
+    $('#fecha_input').val(dia + "/" + mes+1 + "/" + ano);
+    $(function () {
+        $("#datapicker3").datepicker({ dateFormat: 'dd-mm-yy' });
+       
+    });
+    $(function () {
+        $("#datapicker2").datepicker({ dateFormat: 'dd-m-yy' });
+
+    });
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div id="buscador" class="input-group date" data-provide="datepicker" @*style="margin-top:-10px;"*@>
+                <input id="datapicker" type="text" class="form-control" placeholder="Buscar por cliente">
+                <a id="buscar" class="btn btn-default" style="color:white; background-color:black;">
+                    <span class="glyphicon glyphicon-search"></span> Buscar
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div id="buscador2" class="input-group date" data-provide="datepicker" style="width:180px; margin-top:10px;">
+                
+                <input id="datapicker2" name="fecha1" type="text" class="form-control" placeholder="Buscar por fecha: desde">
+               
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <div id="buscador2" class="input-group date" data-provide="datepicker">
+                
+                <input id="datapicker3" name="fecha2" type="text" class="form-control" placeholder="Buscar por fecha: hasta" style="margin-top:10px;">
+                <a id="buscar2" class="btn btn-default" style="color:white; background-color:black; margin-top:10px;">
+                    <span class="glyphicon glyphicon-th"></span> Buscar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="fondo_tabla">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+
+            <th>
+                Nª de Facturas
+            </th>
+            <th>
+                <strong style="margin-left:-15px">@Html.DisplayNameFor(model => model.Producto)</strong>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Moneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subtotal)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Total)*@Total
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_emision)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            string productos = null;
+            productos = productos + item.Producto;
+
+            <tr>
+                <td id="nombre">
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NroFactura)
+                </td>
+                <td>
+                    <ul style="margin-left:-55px">@Html.Raw(productos)</ul>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Moneda)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subtotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_emision)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Detalle", "Details", "Clientes", new { id = item.IdCliente }, new { @class = "btn btn-success" })
+                </td>
+
+            </tr>
+        }
+        
+    </table>
+    <script>
+        var d = new Date();
+        var dia = d.getDate();
+        var mes = d.getMonth();
+        var ano = d.getFullYear();
+
+        console.log(dia + mes + ano);
+        $('#fecha_input').val(dia + "/" + mes + "/" + ano);
+        var plantilla_tabla = `
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Nombre Cliente
+                                    </th>
+
+                                    <th>
+                                        Nª de Facturas
+                                    </th>
+                                    <th>
+                                        <strong style="margin-left:-15px">Producto</strong>
+                                    </th>
+                                    <th>
+                                        Moneda
+                                    </th>
+                                    <th>
+                                        Subtotal
+                                    </th>
+                                    <th>
+                                        Total
+                                    </th>
+                                    <th>
+                                        Fecha de emisi&#243;n
+                                    </th>
+                                            
+                                </tr>
+                                `
+        var tabla = null;
+        
+        $("#datapicker").keypress(function () {
+           
+            $(`#datapicker`).autocomplete({
+                source: "SelectForName",
+                dataType: "json"
+
+            });
+ 
+        });
+        $("#buscar").click(function () {
+            var tabla_detalle_fact = plantilla_tabla;
+            $.ajax({
+
+                url: "SearchFactura",
+                type: "GET",
+                data: { term: $("#datapicker").val() },
+                success: function (resultado) {
+                   
+                    for (var i = 0; i < resultado.length; i++) {
+                        tabla = `
+                            <tr>
+                                <td id="nombre">
+                                    ${resultado[i].Nombre}
+                                </td>
+
+                                <td>
+                                    ${resultado[i].NroFactura}
+                                </td>
+                                <td>
+                                    <ul style="margin-left:-55px">${resultado[i].Producto}</ul>
+                                </td>
+                                <td>
+                                    ${resultado[i].Moneda}
+                                </td>
+                                <td>
+                                    ${resultado[i].Subtotal}
+                                </td>
+                                <td>
+                                    ${resultado[i].Total}
+                                </td>
+                                <td>
+                                    ${resultado[i].Fecha_emision}@ViewBag.fecha
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-success" href="/Clientes/Details/${resultado[i].IdCliente}">Detalle</a>
+                                </td>
+
+                            </tr>
+                        `;
+                        tabla_detalle_fact = tabla_detalle_fact + tabla;
+                        console.log(tabla_detalle_fact);
+                    }
+
+                    
+                    
+                    $(".table").remove();
+                    $("#fondo_tabla").append(tabla_detalle_fact + "</table>");
+                },
+                error: function (xhr, status, error) {
+                    alert("Error");
+                }
+            });
+           
+        });
+        $("#buscar2").click(function () {
+            var tabla_detalle_fact = plantilla_tabla;
+            var feha_inicial = $("#datapicker2").val();
+            var fecha_final = $("#datapicker3").val();
+            var client = $("#datapicker").val();
+            if ($("#datapicker").val() == "") {
+                console.log("prueba");
+                if ($("#datapicker2").val() == "" || $("#datapicker3").val() == "") {
+                    alert("No debe estar un campo de fechas vacío");
+                }
+                else {
+                    $.ajax({
+                        url: "SelectForDate",
+                        type: "GET",
+                        data: { term: feha_inicial, term2: fecha_final },
+                        success: function (resultado) {
+                            for (var i = 0; i < resultado.length; i++) {
+                                tabla = `
+                                <tr>
+                                    <td id="nombre">
+                                        ${resultado[i].Nombre}
+                                    </td>
+
+                                    <td>
+                                        ${resultado[i].NroFactura}
+                                    </td>
+                                    <td>
+                                        <ul style="margin-left:-55px">${resultado[i].Producto}</ul>
+                                    </td>
+                                    <td>
+                                        ${resultado[i].Moneda}
+                                    </td>
+                                    <td>
+                                        ${resultado[i].Subtotal}
+                                    </td>
+                                    <td>
+                                        ${resultado[i].Total}
+                                    </td>
+                                    <td>
+                                        ${resultado[i].Fecha_emision}@ViewBag.fecha
+                                    </td>
+
+                                    <td>
+                                        <a class="btn btn-success" href="/Clientes/Details/${resultado[i].IdCliente}">Detalle</a>
+                                    </td>
+
+                                </tr>
+                            `;
+                                var dat = (`${resultado[i].Fecha_emision}`);
+
+                                tabla_detalle_fact = tabla_detalle_fact + tabla;
+                                console.log(dat.Date);
+                            }
+                            $(".table").remove();
+                            $("#fondo_tabla").append(tabla_detalle_fact + "</table>");
+                        },
+                        error:
+                            function (xhr, status, error) {
+                                alert("Error");
+                            }
+
+                    });
+
+                }
+            }
+            else {
+                $.ajax({
+                    url: "SelectForDateAndCLient",
+                    type: "GET",
+                    data: { term: feha_inicial, term2: fecha_final, term3: client },
+                    success: function (resultado) {
+
+                        for (var i = 0; i < resultado.length; i++) {
+                            tabla = `
+                            <tr>
+                                <td id="nombre">
+                                    ${resultado[i].Nombre}
+                                </td>
+
+                                <td>
+                                    ${resultado[i].NroFactura}
+                                </td>
+                                <td>
+                                    <ul style="margin-left:-55px">${resultado[i].Producto}</ul>
+                                </td>
+                                <td>
+                                    ${resultado[i].Moneda}
+                                </td>
+                                <td>
+                                    ${resultado[i].Subtotal}
+                                </td>
+                                <td>
+                                    ${resultado[i].Total}
+                                </td>
+                                <td>
+                                    ${resultado[i].Fecha_emision}@ViewBag.fecha
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-success" href="/Clientes/Details/${resultado[i].IdCliente}">Detalle</a>
+                                </td>
+
+                            </tr>
+                        `;
+                            var dat = (`${resultado[i].Fecha_emision}`);
+
+                            tabla_detalle_fact = tabla_detalle_fact + tabla;
+                            console.log(dat.Date);
+                        }
+                        $(".table").remove();
+                        $("#fondo_tabla").append(tabla_detalle_fact + "</table>");
+                    },
+                    error:
+                        function (xhr, status, error) {
+                            alert("Error");
+                        }
+
+                });
+
+                
+            }
+            
+
+        });
+    </script>
+
+
+</div>
+

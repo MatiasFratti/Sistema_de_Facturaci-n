@@ -1,0 +1,54 @@
+﻿@model Sistema_de_Facturacion.Models.Clientes
+
+@{ 
+    ViewBag.title = "Borrar cliente";
+}
+    <h3>¿Estas seguro que quieres borrarlo?</h3>
+    <div>
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nombreCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombreCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.razonSocial)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.razonSocial)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.rut)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.rut)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.estadoCuenta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.estadoCuenta)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Borrar" class="btn btn-default" /> |
+                @Html.ActionLink("Volver", "Index")
+            </div>
+        }
+    </div>
+

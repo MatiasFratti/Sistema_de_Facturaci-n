@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+
+    .contenedor {
+        margin: 30px;
+        padding: 10px;
+        /*border: solid 1px #a98307;*/
+        border-radius: 12px;
+        width: 1000px;
+        height: 500px;
+        background-color: black;
+    }
+    .logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap:36px;
+        margin: 30px auto;
+        margin-left: 30px;
+    }
+    .logo {
+        display: flex;
+        width: 270px;
+        height: 190px;
+        border-radius: 9px;
+        background-color: /*#a98307*/white;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo a img{
+        width:120px;
+    }
+    .logo a{
+        color:black;
+        font-weight:600;
+        text-decoration:none;
+    }
+</style>
+<div class="alert-danger">
+    @{ ViewBag.Nosesion = Session["NoSesion"]; }
+    <center>@ViewBag.Nosesion</center>
+    @{
+        Session["NoSesion"] = null;
+    }
+</div>
+<div class="contenedor">
+    <div class="logos">
+        @*https://lowesfacturacion.cfdinova.com.mx/KPortalExterno/lowes-img/Btn-Facturar02.png*@
+        @*https://pngimage.net/wp-content/uploads/2018/06/gestion-stock-png-2.png*@
+        <div class="logo"><a href="@Url.Action("Facturar","Facturas")"><img src="~/Context/Facturar.png" /><h3>Facturar</h3></a></div>
+        <div class="logo"><a href="@Url.Action("Index","Productos")"><img src="https://png.pngtree.com/svg/20170227/warehouse_467057.png" /><h3>Stock</h3></a></div>
+        <div class="logo"><a href="@Url.Action("DetalleFacturas","Facturas")"><img src="https://image.flaticon.com/icons/png/512/522/522575.png" /><h3>Facturas</h3></a></div>
+
+        <div class="@*col-md-offset-4*@ logo"><a href="@Url.Action("Create","Productos")"><img src="https://www.thenookstore.com/wp-content/uploads/2018/10/shopping-cart-add-button_icon-icons.com_56132.png" /><h3>Compras</h3></a></div>
+        <div class="logo"><a href="@Url.Action("Create","Clientes")"><img src="https://image.flaticon.com/icons/png/512/64/64508.png" /><h3>Agregar cliente</h3></a></div>
+        <div class="logo"><a href="@Url.Action("Index","Clientes")"><img src="http://www.padeljundiz.com/public/uploads/padeljundiz/icono-usuarios.png" /><h3>Clientes</h3></a></div>
+
+    </div>
+</div>
